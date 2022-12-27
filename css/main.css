@@ -170,8 +170,11 @@ div.navbar {
 }
 
 #leftmenulist a:hover {
-  background: #4949499f;
-  color: #e8eb98;
+  border-style: ridge;
+  background: #2727279f;
+  border-radius: 2px 12px 12px 10px;
+  border: 1px solid #80781c;
+  color: #cef181;
 }
 
 #lfsmenulist a:hover {
