@@ -24,15 +24,62 @@ table {	font-size: 1em; }
 
 select { color: #a79b9b; }
 
+
+
 input {
-        border: 1px solid #ccc;
-        background: #eee;
-        color: #000000;
+	border-radius: 12px 12px 12px 12px;
+        border: 1px solid #656262;
+        background: #2727279f;
+	
+        color: #bcb9b9;
+		margin:1px;
+}
+input[type='radio']{
+	opacity:0.9;
+}
+
+input[type='radio']:after{
+	 width: 14px;
+        height: 14px;
+		left:-1px;
+		top: -1px;
+        border-radius: 15px;
+        position: relative;
+        background-color: #272727;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 1px solid #656262;
+}
+input[type='radio']:checked:after{
+	width: 14px;
+        height: 14px;
+		left:-1px;
+		top: -1px;
+        border-radius: 15px;
+        position: relative;
+        background-color: #96ad63;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 1px solid #656262;
+}
+label{
+	color: #bcb9b9;
 }
 
 input:hover {
-        color: #004090;
-        background: #ddd;
+	    border: 2px solid #80781c;
+        color: #cef181;
+        background: #2727279f;
+		margin:0px;
+}
+
+input[type='radio']:hover {
+	    border: 2px solid #80781c;
+        color: #cef181;
+        background: #2727279f;
+		margin:1px;
 }
 
 em {
@@ -84,7 +131,7 @@ hr {
 
 #search {
         position: absolute;
-        right: 20px;
+		right: 20px;
         top: 0px;
         margin: 5pt 0 5pt 0;
 }
@@ -96,47 +143,67 @@ div.navbar {
         margin: 0;
         width: 100%;
         padding: 0;
-        background-color: #fff;
-        text-align: right;
-        border-top: solid 1px #ccc;
-        border-bottom: solid 1px #ccc;
+
+        text-align: center;
+        border-top: ridge 3px #4946389f;
 }
 
 #menu {
   list-style-type: none;
   padding: 0;
-  margin: 0;
-  text-align: right;
+  margin: auto;
+  text-align: center;
+	
 }
 
 #menu li {
   display: inline;
   padding: 0;
   margin: 0;
-  text-align: right;
+  text-align: center;
+	
+	
 }
 
 #menu a {
-  float: right;
-  display: block;
-  padding: 5px 20px;
-  margin: 0;
+  display: inline-block;
+  padding: 5px 0px;
+	width:15%;
+  padding-left: auto;
+	padding-right: auto;
+	margin:0;
+
+
   border-bottom: none;
   text-decoration: none;
+	background: #2322229f;
+	border-radius: 2px 2px 10px 10px;
+  border: 1px solid #0a0a0a9f;
+	border-top: 0px;
+	
 }
 
 #lfsactive:link, #lfsactive:visited, #alfsactive:link, #alfsactive:visited, #blfsactive:link, #blfsactive:visited, #hlfsactive:link, #hlfsactive:visited, #hintsactive:link, #hintsactive:visited, #livecdactive:link, #livecdactive:visited, #patchesactive:link, #patchesactive:visited {
   color: white;
   font-weight: bold;
-  padding: 5px 20px;
+	font-size: 1.4em;
 }
 
 #lfs:link, #lfs:visited, #blfs:link, #blfs:visited, #alfs:link, #alfs:visited, #clfs:link, #clfs:visited, #hlfs:link, #hlfs:visited, #hints:link, #hints:visited, #livecd:link, #livecd:visited, #patches:link, #patches:visited {
   font-weight: bold;
-  color: #777;
+  color: #c0c4769f;
+	font-size: 1.4em;
 }
 
-#lfs:hover, #lfsactive:hover, #alfs:hover, #alfsactive:hover, #blfs:hover, #blfsactive:hover, #clfs:hover, #hlfs:hover, #hlfsactive:hover, #hints:hover, #hintsactive:hover, #livecd:hover, #livecdactive:hover, #patches:hover, #patchesactive:hover { background-color: #ddd }
+#lfs:hover, #lfsactive:hover, #alfs:hover, #alfsactive:hover, #blfs:hover, #blfsactive:hover, #clfs:hover, #hlfs:hover, #hlfsactive:hover, #hints:hover, #hintsactive:hover, #livecd:hover, #livecdactive:hover, #patches:hover, #patchesactive:hover { 
+	background-color: #2727279f;
+	color: #c4d393f0;
+	border-radius: 2px 2px 10px 10px;
+   border: 1px solid #80781c82;
+	border-bottom: 3px ridge #80781c82;
+	border-top:0px;
+
+}
 
 
 /* Project specfic left-hand menus       */
@@ -154,7 +221,7 @@ div.navbar {
 }
 
 #leftmenu li {
-  margin: 0;
+  margin: 0px;
 	background: #2322229f;
 	border-radius: 2px 12px 12px 10px;
   border: 1px solid #0a0a0a9f;
@@ -164,7 +231,7 @@ div.navbar {
   text-decoration: none;
   border: none;
   display: block;
-  margin: 0;
+  margin: 1px 0px;
   padding: 7px 15px;
   color: #b5b99d9f;
 }
@@ -175,6 +242,8 @@ div.navbar {
   border-radius: 2px 12px 12px 10px;
   border: 1px solid #80781c;
   color: #cef181;
+	padding: 7px 16px;
+	margin:0px 0px;
 }
 
 #lfsmenulist a:hover {
@@ -186,55 +255,73 @@ div.navbar {
 }
 
 #alfsmenulist a:hover {
-  background: #92d800;
-  color: white;
+  border-style: ridge;
+  background: #2727279f;
+	border-radius: 2px 12px 12px 10px;
+  border: 1px solid #80781c;
+  color: #cef181;
 }
 
 #blfsmenulist a:hover {
-  background: #a27700;
-  color: white;
+  border-style: ridge;
+  background: #2727279f;
+	border-radius: 2px 12px 12px 10px;
+  border: 1px solid #80781c;
+  color: #cef181;
 }
 
 #hlfsmenulist a:hover {
-  background: #fd7700;
-  color: white;
+  border-style: ridge;
+  background: #2727279f;
+	border-radius: 2px 12px 12px 10px;
+  border: 1px solid #80781c;
+  color: #cef181;
 }
 
 #hintsmenulist a:hover {
-  background: #8400ff;
-  color: white;
+border-style: ridge;
+  background: #2727279f;
+	border-radius: 2px 12px 12px 10px;
+  border: 1px solid #80781c;
+  color: #cef181;
 }
 
 #livecdmenulist a:hover {
-  background: red;
-  color: white;
+ border-style: ridge;
+  background: #2727279f;
+	border-radius: 2px 12px 12px 10px;
+  border: 1px solid #80781c;
+  color: #cef181;
 }
 
 #patchesmenulist a:hover {
-  background: #0c0470;
-  color: white;
+  border-style: ridge;
+  background: #2727279f;
+	border-radius: 2px 12px 12px 10px;
+  border: 1px solid #80781c;
+  color: #cef181;
 }
 
 #lfsactive:link, #lfsactive:visited {
-  background: #0072ff;
+  background: #2727279f;
 }
 #alfsactive:link, #alfsactive:visited {
-  background: #92d800;
+  background: #2727279f;
 }
 #blfsactive:link, #blfsactive:visited {
-  background: #a27700;
+  background: #2727279f;
 }
 #hlfsactive:link, #hlfsactive:visited {
-  background: #fd7700;
+  background: #2727279f;
 }
 #hintsactive:link, #hintsactive:visited {
-  background: #8400ff;
+  background: #2727279f;
 }
 #livecdactive:link, #livecdactive:visited {
-  background: red;
+  background: #2727279f;
 }
 #patchesactive:link, #patchesactive:visited {
-  background: #0c0470;
+  background: #2727279f;
 }
 
 
@@ -246,7 +333,7 @@ div.navbar {
         right: 0;
         top: 118px;
         padding: 15px 0px 15px 10px;
-        border-left: 1px solid #ccc;
+        border-left: 1px solid #fff;
 	z-index: 1;
 }
 
