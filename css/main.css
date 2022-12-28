@@ -10,6 +10,11 @@ body {
 
 p { margin: 10pt; }
 
+img {
+   width: 35%;
+  height: auto;
+}
+
 h1 {
 	color: #f5ffb7;
 	font-size: 1.7em;
